@@ -54,16 +54,18 @@ public class UserBean {
 
 			externalContext.invalidateSession();
 
-			String homeURL = "http://localhost:8483/esafra-local/pages/public/index.jsf";
+			String homeURL = "http://localhost:8483/e-safra-web/login.jsf";
 			FacesContext.getCurrentInstance().getExternalContext()
 					.redirect(homeURL);
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
 	}
+
 	public Station doFindUserByName(String name) {
 		return businessLogicServicesLocal.findStationByName(name);
 	}
+
 	public User getUser() {
 		return user;
 	}

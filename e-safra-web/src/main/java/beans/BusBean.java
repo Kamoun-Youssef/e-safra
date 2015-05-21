@@ -30,6 +30,14 @@ public class BusBean {
 	@ManagedProperty(value = "#{lineBean}")
 	private LineBean lineBean;
 
+	public LineBean getLineBean() {
+		return lineBean;
+	}
+
+	public void setLineBean(LineBean lineBean) {
+		this.lineBean = lineBean;
+	}
+
 	public void doSelect() {
 		visibility = true;
 	}
